@@ -201,7 +201,7 @@
 // will be applied to all of them. This is useful when a user has a mixed set of limit pins with both
 // normally-open(NO) and normally-closed(NC) switches installed on their machine.
 // NOTE: PLEASE DO NOT USE THIS, unless you have a situation that needs it.
-// #define INVERT_LIMIT_PIN_MASK ((1<<X_LIMIT_BIT)|(1<<Y_LIMIT_BIT)) // Default disabled. Uncomment to enable.
+#define INVERT_LIMIT_PIN_MASK ((1<<X_LIMIT_BIT)|(1<<Y_LIMIT_BIT) | (1<<Z_LIMIT_BIT)) // Default disabled. Uncomment to enable.
 
 // Inverts the spindle enable pin from low-disabled/high-enabled to low-enabled/high-disabled. Useful
 // for some pre-built electronic boards.
@@ -336,7 +336,7 @@
 // enable pin will output 5V for maximum RPM with 256 intermediate levels and 0V when disabled.
 // NOTE: IMPORTANT for Arduino Unos! When enabled, the Z-limit pin D11 and spindle enable pin D12 switch!
 // The hardware PWM output on pin D11 is required for variable spindle output voltages.
-#define VARIABLE_SPINDLE // Default enabled. Comment to disable.
+//#define VARIABLE_SPINDLE // Default enabled. Comment to disable.
 
 // Used by variable spindle output only. This forces the PWM output to a minimum duty cycle when enabled.
 // The PWM pin will still read 0V when the spindle is disabled. Most users will not need this option, but
